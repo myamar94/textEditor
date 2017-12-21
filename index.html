@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+    <title>My Text-Editor</title>
+</head>
+<body>
+<script type="text/javascript" src="./main.js"></script>
+    <div class="main-wrapper">
+        <div class="head-wrapper">
+            <button id="undoBtn"><i class="fa fa-undo" title="undo" aria-hidden="true"></i></button>
+            <button id="redoBtn"><i class="fa fa-repeat" title="redo" aria-hidden="true"></i></button>
+            
+            <button id="bold" title="bold"><i class="fa fa-bold" aria-hidden="true"></i> </button>
+            <button id="italic" title="Italic"><i class="fa fa-italic" aria-hidden="true"></i></button>
+            <button id="underline" title="UnderLine"><i class="fa fa-underline" aria-hidden="true"></i></button>
+            <button id="strike" title="StrikeThrough"><i class="fa fa-strikethrough" aria-hidden="true"></i></button>
+           
+            <button id="superscript" title="Superscript"><i class="fa fa-superscript" aria-hidden="true"></i></button>
+            <button id="subscript" title="Subscript"><i class="fa fa-subscript" aria-hidden="true"></i></button>
+            <label for="fontStyle" id="labelText">Fontstyle:&nbsp;</label>
+            <select id="fontStyle" name="Font-Style">
+                    <option value="Times New Roman" style="font-family:'Times New Roman';">Times New Roman</option>
+                    <option value="serif" style="font-family:serif;">Serif</option>
+                    <option value="sans-serif" style="font-family:sans-serif;">Sans-serif</option>
+                    <option value="Arial" style="font-family:Arial;">Arial</option>
+                    <option value="Tamoha" style="font-family: Tahoma;">Tahoma</option>
+                    <option value="verdana" style="font-family:Verdana">Verdana</option>
+                    <option value="cursive" style="font-family:cursive;">Cursive</option>
+                    <option value="fantasy" style="font-family:fantasy;">Fantasy</option>
+                    <option value="monospace" style="font-family:monospace;">Monospace</option>
+                    <option value="Calibri" style="font-family:Calibiri;">Calibiri</option>
+            </select>
+            &nbsp;
+            <label for="fontSize" id="labelText">Fontsize:&nbsp;</label>
+            <select id="fontSize" name="Font-Size">
+                    <script>
+                        for(var i=1; i<=15; i++){
+                            document.write("<option>" +i+ "</option>")
+                        }
+                    </script>
+            </select>&nbsp;
+            <label for="fontColor" id="labelText">Font Color:&nbsp;</label>
+            <input type="color" name="color" id="fontColor">
+            <label for="backColor" id="labelText">BG Color:&nbsp;</label>
+            <input type="color" name="color" id="backColor">
+            <button id="alignLeft" title="Align-Left" ><i class="fa fa-align-left" aria-hidden="true"></i></button>
+            <button id="alignCenter" title="Align-Center"><i class="fa fa-align-center" aria-hidden="true"></i></button>
+            <button id="alignRight" title="Align-Right" ><i class="fa fa-align-right" aria-hidden="true"></i></button>
+            <button id="alignJustify" title="Paragraph"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+            <button id="orderList" title="Ordered list"><i class="fa fa-list-ol" aria-hidden="true"></i></button>
+            <button id="unorderList" title="Unordered List"><i class="fa fa-list-ul" aria-hidden="true"></i></button>
+            
+           </div>
+        <div class="content-wrapper">
+                <iframe id = "editor" name="theEditor" height="500px" width="100%" frameborder="2px"></iframe>
+        </div>
+    </div>
+    
+</body>
+</html>
